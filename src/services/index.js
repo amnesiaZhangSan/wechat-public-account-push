@@ -129,7 +129,7 @@ export const getBirthdayMessage = () => {
     birthdayList.forEach(birthday => {
         let birthdayMessage = null
         // 获取距离下次生日的时间
-        const nextBir = dayjs(dayjs().add(1, 'day').format('YYYY') + '-' + birthday.date).diff(dayjs().add(1, 'day'), 'day')
+        const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')+1
         
         if (nextBir === 0) {
             birthdayMessage = `今天是 ${birthday.name} 生日哦，祝${birthday.name}生日快乐！`
