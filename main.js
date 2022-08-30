@@ -37,7 +37,7 @@ const main = async () => {
 
 
     // 集成所需信息
-    const week_list = [ "星期六","星期日", "星期一", "星期二", "星期三", "星期四", "星期五"]
+    const week_list = [ "星期日", "星期一", "星期二", "星期三", "星期四", "星期五","星期六"]
     const wxTemplateParams = [
         { name: toLowerLine('date'), value: `${dayjs().add(1, 'day').format('YYYY-MM-DD')} ${week_list[dayjs().add(1, 'day').format('d')]}`, color: getColor() },
         { name: toLowerLine('province'), value: province, color: getColor() },
